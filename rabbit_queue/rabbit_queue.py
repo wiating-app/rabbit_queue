@@ -1,7 +1,7 @@
 import pika
 
 
-class ImageQueue:
+class RabbitQueue:
     def __init__(self, queue_name, host='localhost'):
         self.connection = pika.BlockingConnection(pika.ConnectionParameters(host=host))
         self.channel = self.connection.channel()
