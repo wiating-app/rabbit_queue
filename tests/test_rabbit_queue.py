@@ -4,19 +4,36 @@
 """Tests for `rabbit_queue` package."""
 
 
-import unittest
+import pytest
 
-from rabbit_queue import rabbit_queue
+from rabbit_queue.rabbit_queue import RabbitQueue
 
 
-class TestRabbit_queue(unittest.TestCase):
-    """Tests for `rabbit_queue` package."""
+QUEUE_NAME = 'some name'
 
-    def setUp(self):
-        """Set up test fixtures, if any."""
 
-    def tearDown(self):
-        """Tear down test fixtures, if any."""
+@pytest.fixture
+def pika_mock(mocker):
+    mocker.patch('rabbit_queue.rabbit_queue.pika', autospec=True)
 
-    def test_000_something(self):
-        """Test something."""
+
+@pytest.fixture
+def rabbit_queue_mock(pika_mock):
+    return RabbitQueue(queue_name=QUEUE_NAME)
+
+
+def test_createObject(rabbit_queue_mock):
+    pass
+
+
+def test_publish(rabbit_queue_mock):
+    rabbit_queue_mock.publish('some body')
+
+
+def some_callback():
+    pass
+
+
+def test_consume(rabbit_queue_mock):
+    rabbit_queue_mock.consume(some_callback)
+

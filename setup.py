@@ -14,14 +14,11 @@ with open('HISTORY.rst') as history_file:
 with open('requirements.txt') as f:
     requirements = f.read().splitlines()
 
-setup_requirements = [ ]
-
-test_requirements = [ ]
 
 setup(
     author="Dawid Wolski",
     author_email='merito123@gmail.com',
-    python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*',
+    python_requires='!=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
@@ -43,9 +40,6 @@ setup(
     keywords='rabbit_queue',
     name='rabbit_queue',
     packages=find_packages(include=['rabbit_queue', 'rabbit_queue.*']),
-    setup_requires=setup_requirements,
-    test_suite='tests',
-    tests_require=test_requirements,
     url='https://github.com/merito/rabbit_queue',
     version='0.1.0',
     zip_safe=False,
