@@ -2,18 +2,8 @@
 Rabbit Queue
 ============
 
-
-.. image:: https://img.shields.io/pypi/v/rabbit_queue.svg
-        :target: https://pypi.python.org/pypi/rabbit_queue
-
-.. image:: https://img.shields.io/travis/merito/rabbit_queue.svg
-        :target: https://travis-ci.org/merito/rabbit_queue
-
-.. image:: https://readthedocs.org/projects/rabbit-queue/badge/?version=latest
-        :target: https://rabbit-queue.readthedocs.io/en/latest/?badge=latest
-        :alt: Documentation Status
-
-
+.. image:: https://img.shields.io/travis/wiating-app/rabbit_queue.svg
+        :target: https://travis-ci.org/wiating-app/rabbit_queue
 
 
 Rabbit queue.
@@ -22,11 +12,6 @@ Rabbit queue.
 * Free software: MIT license
 * Documentation: https://rabbit-queue.readthedocs.io.
 
-
-Features
---------
-
-* TODO
 
 Credits
 -------
